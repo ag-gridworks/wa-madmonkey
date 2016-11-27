@@ -1,0 +1,24 @@
+#admin-page {
+	.product-list {
+		@include make-md-column(10);
+		margin-bottom: 90px;
+
+	}
+
+	input[type=submit] {
+		padding: 0;
+		height: 35px;
+		width: 100%;
+	}
+
+	h2 {
+		margin-bottom: 40px;
+	}
+}
+
+.formulario {
+	@include make-md-column(8);
+	@include make-md-column-offset(2);
+
+	margin-top: 30px;
+}

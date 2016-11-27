@@ -1,0 +1,8 @@
+#categories {
+	#categories__items {
+		.categories__item {
+			@include make-md-column(2);
+			background-color: orange;
+		}
+	}
+}

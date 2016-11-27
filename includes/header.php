@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
+	<title>Mad Monkey Store</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="css/vendors/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<script src="js/vendors/jquery/jquery-3.1.0.min.js"></script>
+	<script src="js/vendors/bootstrap/bootstrap.min.js"></script>
+	<script src="js/vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/sortable.js"></script>
+</head>
+
+<?php $root = $_SERVER['DOCUMENT_ROOT'].'/lojamad'; ?>
+<?php include($root."/includes/functions.php");?>
+<?php connect();
+session_start();
+
+
+if (isset($_SESSION['uid'])) {
+
+	include($root."/includes/safe.php");
+}
+include($root."/includes/navbar.php");
+
+if (isset($_SESSION['uid'])) {
+
+	include($root."/includes/options.php");
+}
+
+$sql = mysql_query("SELECT SUM(valor) as total FROM custos_fixos");
+$row = mysql_fetch_array($sql);
+   $custos_fixos = $row['total'];
+
+$sql3 = mysql_query("SELECT SUM(valor) as total FROM gastos");
+$row3 = mysql_fetch_array($sql3);
+   $total_gastos = $row3['total'];
+
+$contar = mysql_query("SELECT * FROM vendas");
+$total_vendas = mysql_num_rows($contar);
+
+
+$sql2 = mysql_query("SELECT SUM(lucro) as total FROM vendas");
+$row2 = mysql_fetch_array($sql2);
+   $lucro1 = $row2['total'];
+
+$sql4 = mysql_query("SELECT SUM(valor_real) as total FROM vendas");
+$row4 = mysql_fetch_array($sql4);
+   $total_vendido = $row4['total'];
+
+   $lucrototal = $lucro1 - $total_gastos;
+
+   $caixa = $total_vendido - $total_gastos;
+?>

@@ -1,0 +1,129 @@
+.navbar-brand {
+	font: bold 23px 'Cabin';
+	text-transform: uppercase;
+	color: #fff !important;
+	padding: 13px 15px !important;
+	span {
+		font-weight: bold;
+	}
+}
+
+#navegacao {
+	background-color: $main_color;
+	margin: 0;
+	border: none !important;
+	border-radius: 0 !important;
+
+	i {
+		font-size: 20px;
+
+	}
+
+	> .container{
+		#navegacao__content{
+			@include make-md-column(12);
+			.navbar{
+				border-radius: 0;
+				box-shadow: none;
+				border: none;
+				background: $main_color;
+				margin-bottom: 0;
+				.navbar-header {
+					> .navbar-toggle{
+						> .icon-bar{
+							background: #fff;
+						}
+					}
+				}
+				.navbar-collapse {
+					border:none;
+					padding-left: 0;
+					ul.navbar-nav{
+						float: right;
+						li{
+							&.active {
+								a{
+									border-bottom: 2px solid #3498db;
+								}
+							}
+							a{
+								color: #fff;
+								text-transform: uppercase;
+								font: 13px $title_font;
+								font-weight: bold;
+								line-height: 3.6;
+								outline: 0;
+									// border-bottom: 2px solid #fff;
+									&:hover{
+										// border-bottom: 2px solid $style_color;
+										// transition: .3s;
+									}
+								}
+
+								a:before, a:after {
+									content: '';
+									position: absolute;
+									bottom: 21px;
+									left: 35%;
+									width: 31%;
+									right: 0;
+									height: 2px;
+									background-color: $style_color;
+								}
+								a:before {
+									opacity: 0;
+									transform: translateY(-8px);
+									transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+								}
+								a:after {
+									opacity: 0;
+									transform: translateY(4px);
+									transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+								}
+								a:hover:before, a:hover:after, a:focus:before, a:focus:after {
+									opacity: 1;
+									transform: translateY(0);
+								}
+								a:hover:before, a:focus:before {
+									transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+								}
+								a:hover:after, a:focus:after {
+									transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+    font: bold 13px 'Cabin';
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #1d73ad; }
+
+    @media (max-width: 767px) {
+    	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    		color: #777;
+    		background-color: #ffffff;
+
+    		&:hover {background-color: #fff;}
+    	}
+    }
+
+.buscar {
+	background-color: #2980b9;
+	width: 100%;
+	.buscar__inner {
+		background-color: #2980b9;
+		padding: 20px;
+			@include make-md-column(10);
+	@include make-md-column-offset(1);
+	}
+}

@@ -1,0 +1,66 @@
+#panel {
+	.panel__items {
+		@include make-md-column(12);
+
+		.panel-box {
+			
+			@include make-xs-column(6);
+			@include make-sm-column(6);
+			@include make-md-column(2.4);
+			background-color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+			margin-top: 20px;
+			background-clip: content-box;
+			position: relative;
+   			width: 50%;
+    		overflow: hidden;
+
+    		i {
+    			font-size: 27px;
+    		}
+
+    		p {
+    			font-size: 30px;
+    		}
+
+    		&:before {
+    			content: "";
+    display: block;
+    padding-top: 100%;
+    		}
+
+    		&:hover {
+    			cursor: pointer;
+    			background-color: #9b59b6;
+    			color: #fff;
+    			transition: 0.2s;
+    		}
+
+
+    		.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    h3 {
+        font-size: 23px;
+    }
+}
+.square-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+		}
+	}
+}

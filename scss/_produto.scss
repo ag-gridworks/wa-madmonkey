@@ -1,0 +1,145 @@
+#produto {
+	#produto__items {
+		margin-bottom: 60px;
+		.produto__item {
+			@include make-md-column(12);
+			margin-top: 30px;
+
+			img {
+				@include img-responsive;
+				margin-top: 20px;
+			}
+
+			.produto-img {
+				@include make-md-column(4);
+			}
+
+			.produto-info {
+				@include make-md-column(8);
+
+				i {
+					font-size: 20px;
+				}
+
+				.produto-qtd {
+					@include make-xs-column(6);
+					@include make-xs-column(6);
+					@include make-md-column(3);
+					background-color: #fff;
+					padding: 10px;
+					text-align: center;
+					font-weight: bold;
+					font-size: 20px;
+					border-right: 2px solid #ecf0f1;
+					border-bottom: 2px solid #ecf0f1;
+				}
+
+				> .produto-vendas {
+					@include make-xs-column(6);
+					@include make-md-column(6);
+					@include make-md-column(4);
+					padding: 10px;
+					text-align: center;
+					font-weight: bold;
+					font-size: 20px;
+					margin-top: 20px;
+
+					> p {
+						font-size: 27px;
+					}
+				}
+
+				.produto-action {
+					@include make-md-column(12);
+					background-color: #fff;
+					padding: 10px;
+					text-align: center;
+					font-weight: bold;
+					font-size: 20px;
+					margin-top: 20px;
+					background-clip: content-box !important;
+				}
+			}
+
+			.produto-price {
+				color: #DB0A5B;
+				font-weight: bold;
+				font-size: 30px;
+			}
+		}
+
+		.produto-detail {
+			@include make-md-column(12);
+			padding: 30px;
+		}
+	}
+}
+
+.box-verde {
+	background-color: #27ae60;
+	color: #fff;
+}
+
+.box-azul {
+	background-color: #2980b9;
+	color: #fff;
+}
+
+.box-amarela {
+	background-color: #f39c12;
+	color: #fff;
+}
+
+.box-roxo {
+	background-color: #2980b9;
+	color: #fff;
+}
+
+.box-roxo-claro {
+	background-color: #3498db;
+	color: #fff;
+}
+
+.box-vermelho {
+	background-color: #c0392b;
+	color: #fff;
+}
+
+.box-laranja {
+	background-color: #d35400;
+	color: #fff;
+}
+
+
+.btn-add {
+    background-color: #27ae60 !important;
+    width: 100%;
+    padding: 0 !important;
+
+    &:hover {
+      color: #fff !important;
+      background-color: #2ecc71 !important;
+      border: 2px solid #2ecc71 !important;
+      transition: .3s;
+    }   
+}
+
+.title {
+	    background-color: #9b59b6;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+
+	h3 {
+		margin: 0;
+		font-size: 18px;
+	}
+
+	i {
+		padding: 5px;
+		font-size: 20px;
+		margin-right: 6px;
+	}
+}

@@ -1,0 +1,113 @@
+.content {
+	@include make-row;
+}
+
+body {
+	background-color: #efefef !important;
+	font-family: $body_font;
+}
+
+img {
+	@include img-responsive;
+}
+
+h1, h2, h3, h4 {
+	font-family: $title_font;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+//TITULOS
+.widget__title {
+    margin-bottom: 30px;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      position: relative;
+      color: $title_color;
+      font: bold 30px 'Cabin';
+  }
+  h1::after {
+      content:'';
+      position:absolute;
+      left:25%;
+      top:100%;
+      margin:10px auto;
+      width:50%;
+      height:3px;
+      background: #2980b9;
+  }
+}
+
+.button-orange {
+    background-color: #2980b9 !important;
+    border: 2px solid transparent !important;
+
+    &:hover {
+      color: #2980b9 !important;
+      background-color: transparent !important;
+      border: 2px solid #2980b9 !important;
+      transition: .3s;
+    }   
+}
+
+.button-red {
+    background-color: #e74c3c !important;
+    border: 2px solid transparent !important;
+
+    &:hover {
+      color: #e74c3c !important;
+      background-color: transparent !important;
+      border: 2px solid #e74c3c !important;
+      transition: .3s;
+    }   
+}
+
+.button-roxo {
+    background-color: #9b59b6 !important;
+    border: 2px solid transparent !important;
+
+    &:hover {
+      color: #9b59b6 !important;
+      background-color: transparent !important;
+      border: 2px solid #9b59b6 !important;
+      transition: .3s;
+    }   
+}
+
+input[type=submit] {
+    border: none;
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: #8e44ad;
+      background-color: transparent;
+      border: 2px solid #8e44ad;
+      transition: .3s;
+    }   
+}
+
+.username-box {
+  background-color: #efefef;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  font: 15px bold 'Cabin' !important;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Sortable tables */
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: pointer;
+}

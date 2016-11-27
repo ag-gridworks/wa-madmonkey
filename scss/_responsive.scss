@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+	#produtos {
+		#produtos__items {
+			.produtos__item {
+				.img-area {
+					width: 100%;
+					height: auto;
+					overflow: hidden;
+
+					img {
+						@include img-responsive;
+						height: 100%;
+						width: 100%;
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.navbar-header {display: flex;}
+	.navbar-brand {margin: 0 auto;}
+
+	#panel .panel__items .panel-box p {
+    font-size: 18px;
+	}
+
+	#panel .panel__items .panel-box .square-content h3 {
+    font-size: 15px;
+	}
+
+	
+}
+
