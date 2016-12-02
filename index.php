@@ -1,10 +1,8 @@
 <?php
 
-include("config.php");
-
 // $root = $_SERVER['DOCUMENT_ROOT'].'/nac1';
 
-include("header.php");
+require_once("header.php");
 
 if (isset($_SESSION['uid'])) {
 
@@ -12,3 +10,4 @@ if (isset($_SESSION['uid'])) {
 } else {
 	header("Location: signin.php");
 }
+

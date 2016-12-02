@@ -21,8 +21,10 @@
 	<script src="js/sortable.js"></script>
 </head>
 
-<?php $root = $_SERVER['DOCUMENT_ROOT'].'/lojamad'; ?>
-<?php include($root."/includes/functions.php");?>
+<?php $root = $_SERVER['DOCUMENT_ROOT']; ?>
+<?php require_once($root."/includes/functions.php");?>
+
+<?php require_once($root."/config.php");?>
 <?php connect();
 session_start();
 
