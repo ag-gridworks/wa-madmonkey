@@ -45,9 +45,9 @@
 							<input type="submit" class="button-red" value="Deletar Produto" name="deletar">
 						</form> -->
 
-						<form method="POST" action="admin-alterar.php">
+						<form method="POST" action="alterar-custos.php">
 							<input type="hidden" value="<?php echo $obj->id ?>" name="product_id">
-							<input type="submit" value="Alterar Custo" name="alterar_custo">
+							<input type="submit" value="Alterar Custo" name="alterar">
 						</form>
 
 						<form method="POST" action="process.php">

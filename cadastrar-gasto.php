@@ -22,6 +22,11 @@
      <small id="fileHelp" class="form-text text-muted">Em reais, preencher somente números</small>
     <input type="number" step="0.01" class="form-control" name="valor">
   </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Data do Gasto</label>
+    <input type="date" class="form-control" name="data">
+  </div>
   
   <!-- <div class="form-group">
     <label for="exampleSelect1">Example select</label>
@@ -47,9 +52,10 @@ if (isset($_POST['cadastrar'])) {
 	$nome = $_POST['nome'];
 	$motivo = $_POST['motivo'];
 	$valor = $_POST["valor"];
+  $data = $_POST["data"];
 	
 
-			$sql = mysql_query("INSERT INTO gastos VALUES ('', '".$nome."', '".$motivo."', '".$valor."', now())");
+			$sql = mysql_query("INSERT INTO gastos VALUES ('', '".$nome."', '".$motivo."', '".$valor."', '".$data."')");
 			if ($sql){
 
 			}

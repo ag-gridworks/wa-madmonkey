@@ -3,29 +3,30 @@
 include("includes/header.php");
 connect();
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-//ENVIAR PRODUTOS PARA O BANCO DE DADOS
-if (isset($_POST['enviar'])):
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //ENVIAR PRODUTOS PARA O BANCO DE DADOS
+// if (isset($_POST['enviar'])):
 
-    $nome = $_POST['nome'];
-$valor = $_POST['valor'];
-$img = $_POST['img'];
-$descr = $_POST['descr'];
+//     $nome = $_POST['nome'];
+// $valor = $_POST['valor'];
+// $img = $_POST['img'];
+// $descr = $_POST['descr'];
 
-$enviar = mysql_query("INSERT INTO produtos (nome,valor,img,descr) VALUES ('$nome','$valor','$img','$descr')") or die(mysql_error());
+// $enviar = mysql_query("INSERT INTO produtos (nome,valor,img,descr) VALUES ('$nome','$valor','$img','$descr')") or die(mysql_error());
 
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+// header('Location: ' . $_SERVER['HTTP_REFERER']);
 
-endif;
+// endif;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //DELETAR PRODUTOS DO BANCO DE DADOS
 if (isset($_POST['deletar'])):
 
     $product_id = $_POST['product_id'];
+    $database = $_POST['database'];
 
-$deletar = mysql_query("DELETE FROM produtos WHERE id = $product_id") or die(mysql_error());
+$deletar = mysql_query("DELETE FROM $database WHERE id = $product_id") or die(mysql_error());
 
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -268,13 +269,31 @@ if (isset($_POST['registrar'])) {
             }
 }
 
-
+// Deletar Custo
 
 if (isset($_POST['deletar_custo'])):
 
 $custo_id = $_POST['custo_id'];
 
 $deletar = mysql_query("DELETE FROM custos_fixos WHERE id = $custo_id") or die(mysql_error());
+
+
+if ($deletar) {
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+} else {
+    echo "erro";
+}
+
+endif;
+
+
+// Deletar Gasto
+
+if (isset($_POST['deletar_gasto'])):
+
+$gasto_id = $_POST['gasto_id'];
+
+$deletar = mysql_query("DELETE FROM gastos WHERE id = $gasto_id") or die(mysql_error());
 
 
 if ($deletar) {

@@ -59,10 +59,16 @@
 							<input type="submit" class="button-red" value="Deletar Produto" name="deletar">
 						</form> -->
 
-						<form method="POST" action="admin-alterar.php">
+						<form method="POST" action="alterar-prod.php">
 							<input type="hidden" value="<?php echo $obj->id ?>" name="product_id">
-							<input type="submit" value="Alterar Gasto" name="alterar_gasto">
+							<input type="submit" value="Alterar Produção" name="alterar">
 						</form>
+                        
+                        <form method="POST" action="process.php">
+                            <input type="hidden" value="<?php echo $obj->id ?>" name="product_id">
+                            <input type="hidden" value="producao" name="database">
+                            <input type="submit" class="button-red" value="Deletar Produção" name="deletar">
+                        </form>
                
             </tr>
 
