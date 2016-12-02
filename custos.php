@@ -28,7 +28,7 @@
     </thead>
 
 				<?php
-				$mysqli = new mysqli("localhost", "vitor", "admin", "madsys");
+				$mysqli = new mysqli("mysql427.umbler.com", "paesvitor", "freelove12", "sysmad");
 				$query = "SELECT * FROM custos_fixos";
 				if ($result = $mysqli->query($query)): ?>
 				<?php while($obj = $result->fetch_object()): ?>

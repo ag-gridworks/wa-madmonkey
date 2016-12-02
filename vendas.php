@@ -24,7 +24,7 @@
     </thead>
 
 				<?php
-				$mysqli = new mysqli("localhost", "vitor", "admin", "madsys");
+				$mysqli = new mysqli("mysql427.umbler.com", "paesvitor", "freelove12", "sysmad");
 
 				$query = "SELECT * FROM vendas ORDER BY id DESC";
 				if ($result = $mysqli->query($query)): ?>
