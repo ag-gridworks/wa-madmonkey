@@ -1,4 +1,4 @@
-<?php include ("header.php"); ?>
+<?php require_once ("header.php"); ?>
 
 <?php if (isset($_SESSION['uid']) && $user['role'] == 2): ?>
 

@@ -21,22 +21,22 @@
 	<script src="js/sortable.js"></script>
 </head>
 
-<?php require_once("../includes/functions.php");?>
+<?php require_once("functions.php");?>
 
-<?php require_once("../config.php");?>
+<?php require_once("config.php");?>
 <?php connect();
 session_start();
 
 
 if (isset($_SESSION['uid'])) {
 
-	include("../includes/safe.php");
+	include("safe.php");
 }
-include("../includes/navbar.php");
+include("navbar.php");
 
 if (isset($_SESSION['uid'])) {
 
-	include("../includes/options.php");
+	include("options.php");
 }
 
 $sql = mysql_query("SELECT SUM(valor) as total FROM custos_fixos");
