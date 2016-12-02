@@ -21,6 +21,8 @@
 	<script src="js/sortable.js"></script>
 </head>
 
+<?php error_reporting(E_ALL ^ E_DEPRECATED); ?>
+
 <?php require_once("functions.php");?>
 
 <?php require_once("config.php");?>
