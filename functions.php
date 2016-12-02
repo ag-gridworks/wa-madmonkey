@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL ^ E_DEPRECATED);
+
 function connect(){
 	mysql_connect("localhost", "vitor", "admin");
 	mysql_select_db("madsys");
