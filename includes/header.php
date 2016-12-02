@@ -58,7 +58,13 @@ $sql4 = mysql_query("SELECT SUM(valor_real) as total FROM vendas");
 $row4 = mysql_fetch_array($sql4);
    $total_vendido = $row4['total'];
 
+$sql5 = mysql_query("SELECT SUM(valor) as total FROM compras");
+$row5 = mysql_fetch_array($sql5);
+   $total_compras = $row5['total'];
+
    $lucrototal = $lucro1 - $total_gastos;
 
-   $caixa = $total_vendido - $total_gastos;
+   $caixa = $total_vendido - $total_gastos - $total_compras;
+
+
 ?>

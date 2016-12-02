@@ -82,7 +82,7 @@
 					<span>
 						<i class="icon-minus" aria-hidden="true"></i>
 						<h3>Compras</h3>
-						<p>R$<?php echo $total_gastos; ?></p>
+						<p>R$<?php echo $total_compras; ?></p>
 					</span>
 				</div>
 			</div>

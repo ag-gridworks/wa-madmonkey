@@ -6,14 +6,14 @@
 		<a href="vendas.php"><div class="options__box">
 			Vendas
 		</div></a>
-		<a href="admin-listar.php"><div class="options__box">
-			Lembretes
-		</div></a>
 		<a href="custos.php"><div class="options__box">
 			Custos Fixos
 		</div></a>
 		<a href="gastos.php"><div class="options__box">
 			Gastos
+		</div></a>
+		<a href="compras.php"><div class="options__box">
+			Compras
 		</div></a>
 		<a href="prod.php"><div class="options__box">
 			Produção
