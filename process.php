@@ -26,7 +26,7 @@ if (isset($_POST['deletar'])):
     $product_id = $_POST['product_id'];
     $database = $_POST['database'];
 
-$deletar = mysql_query("DELETE FROM $database WHERE id = $product_id") or die(mysql_error());
+    $deletar = mysql_query("DELETE FROM $database WHERE id = $product_id") or die(mysql_error());
 
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -261,7 +261,7 @@ if (isset($_POST['registrar'])) {
         $alterar = mysql_query("UPDATE produtos SET vendidos = vendidos+1 WHERE id = $p_id") or die(mysql_error());
         $alterar = mysql_query("UPDATE produtos SET lucro_total = '$lucro_total' WHERE id = $p_id") or die(mysql_error());
 
-        $sql = mysql_query("INSERT INTO vendas VALUES ('', '".$nome."', '".$p_id."', now(), '".$lucro."', '".$notas."', '".$desconto."', '".$valor."', '".$valor_real."')");
+        $sql = mysql_query("INSERT INTO vendas VALUES ('', '".$nome."', '".$p_id."', now(), '".$lucro."', '".$notas."', '".$desconto."', '".$valor."', '".$valor_real."', '".$tamanho."')");
             if ($sql){
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
             } else {

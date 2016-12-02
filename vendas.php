@@ -14,12 +14,14 @@
         	<th>Imagem</th>
             <th>ID</th>
             <th>Nome</th>
+            <th>Tamanho</th>
             <th>Cliente</th>
             <th>Data</th>
             <th>Notas</th>
             <th>Descontos</th>
             <th>Valor</th>
-            <th class="text-center">Lucro</th>
+            <th>Lucro</th>
+            <th class="text-center">Ação</th>
         </tr>
     </thead>
 
@@ -42,14 +44,26 @@
 				<td><img style="width: 100px" src="fotos/<?php echo $produto['img'] ?>"></td>
                 <td><?php echo $obj->id ?></td>
                 <td><?php echo $produto['nome'] ?></td>
+                <td><?php echo $obj->tamanho ?></td>
                 <td><?php echo $obj->cliente ?></td>
                 <td><?php echo $obj->data ?></td>
                 <td><?php echo $obj->notas ?></td>
                 <td><?php echo $obj->desconto ?></td>
                 <td>R$<?php echo $obj->valor_inteiro ?></td>
+                <td>R$<?php echo $obj->lucro ?></td>
                 <td class="text-center">
 
-               R$<?php echo $obj->lucro ?></td>
+               <form method="POST" action="alterar-venda.php">
+                            <input type="hidden" value="<?php echo $obj->id ?>" name="product_id">
+                            <input type="submit" value="Alterar Venda" name="alterar">
+                        </form>
+
+                        <form method="POST" action="process.php">
+                            <input type="hidden" value="<?php echo $obj->id ?>" name="venda_id">
+                            <input type="hidden" value="<?php echo $obj->tamanho ?>" name="tamanho">
+                            <input type="hidden" value="vendas" name="database">
+                            <input type="submit" class="button-red" value="Deletar Custo" name="deletar_venda">
+                        </form>
                
             </tr>
 
