@@ -33,9 +33,9 @@
     </thead>
 
 				<?php
-				$mysqli = new mysqli("localhost", "vitor", "admin", "madsys");
+				// $mysqli = new mysqli("localhost", "vitor", "admin", "madsys");
 				$query = "SELECT * FROM produtos";
-				if ($result = $mysqli->query($query)): ?>
+				if ($result = query($query)): ?>
 				<?php while($obj = $result->fetch_object()): ?>
 				
 					<tr>
