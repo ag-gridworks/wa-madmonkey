@@ -23,15 +23,21 @@
 			</div>
 
 			<div class="form-group">
-				<label for="exampleInputEmail1">Quantide Comprada</label>
+				<label for="exampleInputEmail1">Quantide (em metros)</label>
 				<small id="fileHelp" class="form-text text-muted">Em KG ou Metros</small>
-				<input class="form-control" type="text" name="qtd">
+				<input type="number" step="0.01" class="form-control" type="text" name="qtd_metros">
 			</div>
 
 			<div class="form-group">
-				<label for="exampleInputPassword1">Valor do total do tecido</label>
+				<label for="exampleInputPassword1">Valor do metro</label>
 				<small id="fileHelp" class="form-text text-muted">Em reais, preencher somente números</small>
-				<input type="number" step="0.01" class="form-control" name="valor">
+				<input type="number" step="0.01" class="form-control" name="valor_metro">
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputPassword1">Valor do produto</label>
+				<small id="fileHelp" class="form-text text-muted">Em reais, preencher somente números</small>
+				<input type="number" step="0.01" class="form-control" name="valor_produto">
 			</div>
 
 			<div class="form-group col-md-3 col-xs-6">
@@ -71,9 +77,10 @@
 			$tecido = $_POST['tecido'];
 			$prazo = $_POST['prazo'];
 			$notas = $_POST['notas'];
-			$qtd = $_POST['qtd'];
-			$valor = $_POST['valor'];
-			$foto = $_FILES["foto"];
+			$qtd_metros = $_POST['qtd_metros'];
+			$valor_metro = $_POST['valor_metro'];
+			$valor_produto = $_POST['valor_produto'];
+			$foto = $_FILES['foto'];
 
 
 			$qtd_p = $_POST['qtd_p'];
@@ -83,9 +90,9 @@
 
 			if (!empty($foto["name"])) {
 
-				$largura = 2250;
-				$altura = 2700;
-				$tamanho = 6000000;
+				$largura = 22500;
+				$altura = 27000;
+				$tamanho = 60000000;
 
 				if(!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $foto["type"])){
 					$error[1] = "Isso não é uma imagem.";
@@ -115,12 +122,11 @@
 
 
 
-				$sql = mysql_query("INSERT INTO producao (tecido,prazo,notas,qtd_p,qtd_m,qtd_g,qtd_gg,qtd,valor,img)
-					VALUES ('$tecido','$prazo','$notas','$qtd_p','$qtd_m','$qtd_g','$qtd_gg','$qtd','$valor','$nome_imagem')");
+				$sql = mysql_query("INSERT INTO producao (tecido,prazo,notas,qtd_p,qtd_m,qtd_g,qtd_gg,qtd_metros,valor_metro,img,valor_produto)
+					VALUES ('$tecido','$prazo','$notas','$qtd_p','$qtd_m','$qtd_g','$qtd_gg','$qtd_metros','$valor_metro','$nome_imagem','$valor_produto')");
 				if ($sql){
 					header("Location: prod.php");
 				}
-
 			}
 		}
 
@@ -128,3 +134,4 @@
 			?>
 			<div style="margin-bottom: 80px"></div>
 		</div>
+
