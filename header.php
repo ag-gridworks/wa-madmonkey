@@ -65,9 +65,15 @@ $sql5 = mysql_query("SELECT SUM(valor) as total FROM compras");
 $row5 = mysql_fetch_array($sql5);
    $total_compras = $row5['total'];
 
+
+$sql6 = mysql_query("SELECT SUM(valor) as total FROM investimentos");
+$row6 = mysql_fetch_array($sql6);
+   $investimentos = $row6['total'];
+
+
    $lucrototal = $lucro1 - $total_gastos;
 
-   $caixa = $total_vendido - $total_gastos - $total_compras;
+   $caixa = $total_vendido - $total_gastos - $total_compras + $investimentos;
 
 
 ?>

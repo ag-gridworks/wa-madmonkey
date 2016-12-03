@@ -10,6 +10,8 @@
 
     <button type="submit" class="btn btn-primary button-roxo" name="cadastrar" onclick="window.location.href = 'cadastrar-compra.php'">Cadastrar Nova Compra</button></center>
 
+    <button type="submit" class="btn btn-primary button-roxo" name="cadastrar" onclick="window.location.href = 'cadastrar-investimento.php'">Cadastrar Novo Investimento</button></center>
+
 	<div style="margin-bottom: 20px"></div>
 
 
