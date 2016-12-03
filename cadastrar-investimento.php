@@ -47,8 +47,6 @@ if (isset($_POST['cadastrar'])) {
 			 $sql = mysql_query("INSERT INTO investimentos (valor,data)
           VALUES ($valor','$data')");
 
-			}
-
 	}
 
 endif;
