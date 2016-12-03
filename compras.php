@@ -8,7 +8,7 @@
 
     <div class="widget__title"><h1>Compras da Loja</h1></div>
 
-    <button type="submit" class="btn btn-primary button-roxo" name="cadastrar" onclick="window.location.href = 'cadastrar-compra.php'">Cadastrar Nova Compra</button></center>
+    <button type="submit" class="btn btn-primary button-roxo" name="cadastrar" onclick="window.location.href = 'cadastrar-compra.php'">Cadastrar Nova Compra</button>
 
     <button type="submit" class="btn btn-primary button-roxo" name="cadastrar" onclick="window.location.href = 'cadastrar-investimento.php'">Cadastrar Novo Investimento</button></center>
 
