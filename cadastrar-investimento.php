@@ -29,8 +29,6 @@
       <option>5</option>
     </select>
   </div> -->
-  <input type="hidden" value="<?php echo $product_id ?>" name="product_id">
-  <input type="hidden" value="<?php echo $user_id ?>" name="user_id">
   <button type="submit" class="btn btn-primary button-roxo" name="cadastrar">Registrar Investimento</button>
 </form>
 
@@ -44,8 +42,7 @@ if (isset($_POST['cadastrar'])) {
   $data = $_POST["data"];
 	
 
-			 $sql = mysql_query("INSERT INTO investimentos (valor,data)
-          VALUES ($valor','$data')");
+			 $sql = mysql_query("INSERT INTO investimentos VALUES ('', '".$valor."', '".$data."')");
 
 	}
 
