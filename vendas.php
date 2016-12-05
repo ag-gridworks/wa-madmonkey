@@ -1,4 +1,4 @@
-<?php include("includes/header.php"); ?>
+<?php include("header.php"); ?>
 
 <?php if (isset($_SESSION['uid'])): ?>
 
@@ -26,7 +26,7 @@
     </thead>
 
 				<?php
-				$mysqli = new mysqli("mysql427.umbler.com", "paesvitor", "freelove12", "sysmad");
+				// $mysqli = new mysqli("mysql427.umbler.com", "paesvitor", "freelove12", "sysmad");
 
 				$query = "SELECT * FROM vendas ORDER BY id DESC";
 				if ($result = $mysqli->query($query)): ?>

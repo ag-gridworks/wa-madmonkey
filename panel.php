@@ -19,7 +19,7 @@
 			<div class='square-content'>
 				<div>
 					<span>
-						<i class="icon-wallet" aria-hidden="true"></i>
+						<i class="icon-speedometer" aria-hidden="true"></i>
 						<h3>Investimentos Feitos</h3>
 						<p>R$<?php echo $investimentos; ?></p>
 					</span>
@@ -101,3 +101,5 @@
 		</div>
 	</div>
 </div>
+
+<div style="margin-bottom: 60px; clear: both"></div>

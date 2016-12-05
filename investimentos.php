@@ -24,7 +24,7 @@
     </thead>
 
 				<?php
-				$mysqli = new mysqli("mysql427.umbler.com", "paesvitor", "freelove12", "sysmad");
+				// $mysqli = new mysqli("mysql427.umbler.com", "paesvitor", "freelove12", "sysmad");
 				$query = "SELECT * FROM investimentos";
 				if ($result = $mysqli->query($query)): ?>
 				<?php while($obj = $result->fetch_object()): ?>

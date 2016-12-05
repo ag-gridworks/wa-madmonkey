@@ -12,6 +12,7 @@
       rel="stylesheet">
 	<link rel="stylesheet" href="css/vendors/plugins.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<script src="js/vendors/jquery/jquery-3.1.0.min.js"></script>
@@ -26,8 +27,10 @@
 <?php require_once("functions.php");?>
 
 <?php require_once("config.php");?>
+<?php session_start(); ?>
 <?php connect();
-session_start();
+
+$mysqli = new mysqli("mysql427.umbler.com:41890", "paesvitor", "freelove12", "sysmad");
 
 
 if (isset($_SESSION['uid'])) {
